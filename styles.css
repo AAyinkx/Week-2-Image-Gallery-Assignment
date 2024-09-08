@@ -1,0 +1,160 @@
+/* This reset the ddefault browser styles so it doesn't affect your own styles */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#thumbnail-container {
+  height: 300px;
+  width: 100px;
+  flex-direction: row;
+  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: center;
+  z-index: 100;
+  background-color: #00000000;
+  top: 50vh; /*Position from the top*/
+  left: 3vw; /* Set left to 50% of the parent element */
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  /* repositions an element vertically on the 2D plane. */
+  overflow: scroll;
+  overflow-x: hidden;
+  /* Hides vertical scroll bar */
+}
+.thumbnail-image {
+  width: 100px;
+  height: 65px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+/* imgaes in the main container */
+#main-image-container img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+#next {
+  position: absolute;
+  bottom: 3vh;
+  right: 40px;
+  z-index: 2;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.266);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+#prev {
+  position: absolute;
+  bottom: 3vh;
+  left: 40px;
+  z-index: 2;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.266);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+#next:hover {
+  color: #ff33b9;
+}
+
+#prev:hover {
+  color: #ff33b9;
+}
+
+#hideShow {
+  position: absolute;
+  top: 3vh;
+  left: 40px;
+  z-index: 2;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+#hideShow:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Media Query for Desktop width */
+@media (width>=600px) {
+  #thumbnail-container {
+    height: 75px;
+    width: 500px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    z-index: 100;
+    background-color: #00000000;
+    top: 3vh; /*Position from the top*/
+    left: 50vw; /* Set left to 50% of the parent element */
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    /* repositions an element horizontally on the 2D plane. */
+    overflow: scroll;
+    overflow-y: hidden;
+    /* Hides vertical scroll bar */
+  }
+  .thumbnail-image {
+    width: 100px;
+    height: 65px;
+    padding: 1px;
+    cursor: pointer;
+  }
+  #next {
+    position: absolute;
+    bottom: 50vh;
+    right: 40px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.266);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+  }
+  #prev {
+    position: absolute;
+    bottom: 50vh;
+    left: 40px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.266);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+  }
+  #hideShow {
+    display: none;
+  }
+}
