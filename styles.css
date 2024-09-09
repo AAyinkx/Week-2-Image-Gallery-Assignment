@@ -9,7 +9,7 @@ body {
   height: 300px;
   width: 100px;
   flex-direction: row;
-  display: none;
+  display: block;
   display: flex;
   flex-wrap: wrap;
   position: absolute;

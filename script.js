@@ -108,19 +108,20 @@ let toggleThumbnail = document.getElementById("hideShow");
 
 //Allows user to show or hide thumbnail in mobile view
 toggleThumbnail.addEventListener("click", function () {
-  if (thumbnailContainer.style.display == "block") {
-    thumbnailContainer.style.display = "none";
+  if (thumbnailContainer.style.display == "none") {
+    thumbnailContainer.style.display = "block";
     console.log(thumbnailContainer.style.display);
   } else {
-    thumbnailContainer.style.display = "block";
+    thumbnailContainer.style.display = "none";
     console.log(thumbnailContainer.style.display);
   }
 });
 
 //!Working on this last bit
-
-// if (toggleThumbnail.style.display == "none") {
-//   thumbnailContainer.style.display = "block";
-// }
+const mediaQuery = window.matchMedia("(min-width: 600px)");
+if (mediaQuery.matches) {
+  // Then trigger an alert
+  document.body.style.display = "block";
+}
 
 startUp();
